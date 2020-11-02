@@ -26,7 +26,7 @@ class Application
     end
 
   elsif req.path.match(/add/)
-    add_item = req.gets
+    add_item = req.params["q"]
 
     if @@item.include?(add_item)
       resp.write "added #{add_item}"
