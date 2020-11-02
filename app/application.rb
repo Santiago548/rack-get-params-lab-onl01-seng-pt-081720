@@ -26,13 +26,13 @@ class Application
     end
 
   elsif req.path.match(/add/)
+    
     add_item = req.params["q"]
 
     if @@item.include?(add_item)
       resp.write "added #{add_item}"
     else
       resp.write "We don't have that item"
-    end
   end
 
 
