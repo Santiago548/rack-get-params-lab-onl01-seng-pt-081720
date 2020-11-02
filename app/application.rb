@@ -31,8 +31,7 @@ class Application
     if @@item.include?(add_item)
       resp.write "added #{add_item}"
     else
-      @@cart.each do |item|
-      resp.write "#{item}\n"
+      resp.write "We don't have that item"
     end
   end
 
